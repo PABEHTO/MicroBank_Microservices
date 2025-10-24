@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.5.6</version>
+    <relativePath/>
+    <!-- lookup parent from repository -->
+  </parent>
+  <modules>
+    <module>microservices/user-service</module>
+    <module>microservices/account-service</module>
+    <module>microservices/transaction-service</module>
+    <module>microservices/composite-user-account-transaction</module>
+    <module>api</module>
+    <module>util</module>
+  </modules>
+  <groupId>microbank</groupId>
+  <artifactId>MicroBank</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>microbank</name>
+  <packaging>pom</packaging>
+  <description>Demo project for Spring Boot</description>
+</project>
