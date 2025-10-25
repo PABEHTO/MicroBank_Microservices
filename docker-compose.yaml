@@ -1,0 +1,25 @@
+version: '2.1'
+
+services:
+  user:
+    build: microservices/user-service
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  account:
+    build: microservices/account-service
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  transaction:
+    build: microservices/transaction-service
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  composite:
+    build: microservices/composite-user-account-transaction
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
