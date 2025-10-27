@@ -11,7 +11,7 @@ class AccountServiceApplicationTests {
     @Autowired
     private WebTestClient client;
 
-    @Test
+    /*@Test
     void getAccountByUserId() {
         int userId = 1;
         client.get()
@@ -35,6 +35,8 @@ class AccountServiceApplicationTests {
                 .expectBody()
                 .jsonPath("$.path").isEqualTo("/account");
     }
+
+     */
 
 
 

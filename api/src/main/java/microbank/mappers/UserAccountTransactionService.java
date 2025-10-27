@@ -4,8 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "UserComposite", description = "some information...")
 public interface UserAccountTransactionService {
@@ -23,5 +22,16 @@ public interface UserAccountTransactionService {
             value = "/composite",
             produces = "application/json"
     )
-    UserAccountTransaction getUserAccountTransaction(@RequestParam int userID);
+    UserAccountTransaction getUser(@RequestParam int userId);
+
+    @PostMapping(
+            value = "/composite",
+            consumes = "application/json"
+    )
+    void createUser(@RequestBody UserAccountTransaction body);
+
+    @DeleteMapping(
+            value = "/composite/{userId}"
+    )
+    void deleteUser(@PathVariable int userId);
 }

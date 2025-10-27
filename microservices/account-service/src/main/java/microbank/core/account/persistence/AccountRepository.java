@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface AccountRepository extends
         CrudRepository<AccountEntity, String> {
-    List<AccountEntity> findByUserId(int userId);
+    //List<AccountEntity> findByUserId(int userId);
+    AccountEntity findByUserId(int userId);
 }

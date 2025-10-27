@@ -1,7 +1,6 @@
 package microbank.core.user;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 public interface UserService {
     @GetMapping(
@@ -9,4 +8,14 @@ public interface UserService {
             produces = "application/json"
     )
     User getUser(@PathVariable int userId);
+
+    @PostMapping(
+            value = "/user",
+            consumes = "application/json",
+            produces = "application/json"
+    )
+    User createUser(@RequestBody User user);
+
+    @DeleteMapping(value = "/user/{userId}")
+    void deleteUser(@PathVariable int userId);
 }

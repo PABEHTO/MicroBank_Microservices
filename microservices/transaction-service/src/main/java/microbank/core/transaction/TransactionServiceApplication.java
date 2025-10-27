@@ -19,5 +19,4 @@ public class TransactionServiceApplication {
 		String myPostgreSqlUri = ctx.getEnvironment().getProperty("spring.datasource.url");
 		LOG.info("Connected to PostgreSQL " + myPostgreSqlUri);
 	}
-
 }
